@@ -1,193 +1,140 @@
-# Awesome-Extended-Enterprise-Learning
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Extended Enterprise Learning Banner" width="100%">
+</p>
 
-## Top Extended Enterprise Learning Ecosystem
+# Awesome Extended Enterprise Learning [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+> A curated collection of leading **Extended Enterprise Learning Management Systems (LMS)**, customer training portals, partner enablement software, and open-source multi-tenant educational platforms.
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Customer Training, Partner Enablement & External Learner Portals*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Extended Enterprise Learning**. These tools enable organizations to deliver training to external audiences—customers, partners, resellers, and franchisees—through branded, self-service learning portals that drive product adoption, reduce churn, and generate revenue.
-
-
-
-**Examples** include Workday Extended Enterprise, Docebo, Cornerstone OnDemand, Absorb LMS, SAP Litmos, LearnUpon, Thought Industries, Skilljar, TalentLMS, and Canvas LMS (the category leaders).
-
-
-
-**Open-source emphasis**: Extended Enterprise Learning is a domain where open-source tooling is **fragmented and largely incomplete**. The strongest options are **Moodle with IOMAD** (mature multi-tenancy with white-labeling, per-tenant SSO, and ecommerce)  and **Open edX with eox-tenant** (multi-tenant plugin for MOOC-scale external learning) . Newer projects like **TutorLoom** and **euron-open-lms** address multi-tenancy and external commerce but are early-stage . No open-source platform matches Skilljar's purpose-built external LMS capabilities (Salesforce integration, customer success data, revenue attribution) out of the box.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Workday Extended Enterprise](https://www.workday.com/)**  
-
-  External learning capabilities within Workday's suite for delivering training to customers, partners, and extended workforce with branded portals and integration with Workday HCM and financial data.
-
-
-
-- **[Docebo](https://www.docebo.com/)**  
-
-  AI-powered learning platform with **Extended Enterprise** module for customer, partner, and employee training through branded, multi-portal experiences with ecommerce and Salesforce integration.
-
-
-
-- **[Cornerstone OnDemand](https://www.cornerstoneondemand.com/)**  
-
-  Talent management platform with extended enterprise capabilities for external training delivery and partner enablement.
-
-
-
-- **[Absorb LMS](https://www.absorblms.com/)**  
-
-  LMS with external training support including ecommerce, branded portals, and content integrations for customer and partner education.
-
-
-
-- **[SAP Litmos](https://www.litmos.com/)**  
-
-  Rapid-deployment LMS with built-in ecommerce and external learner support for customer and partner training.
-
-
-
-- **[LearnUpon](https://www.learnupon.com/)**  
-
-  LMS with **multi-portal support** for customer, partner, and employee training, plus ecommerce and Salesforce integration.
-
-
-
-- **[Thought Industries](https://www.thoughtindustries.com/)**  
-
-  Purpose-built **customer, partner, and professional training** platform named #1 Customer Training System three years running by Craig Weiss Group; features **Panorama** multi-tenant portals for channel partners/resellers/franchisees , instructor-led and virtual instructor-led training management , ecommerce, and advanced reporting.
-
-
-
-- **[Skilljar](https://www.skilljar.com/)**  
-
-  The external LMS purpose-built for **customer and partner education** by Gainsight; features branded Academies with SSO, AI-assisted content creation, certification programs with proctored exams, native Stripe commerce (100+ currencies), Salesforce/Gainsight CS/Zendesk/Marketo integrations, and an MCP Server for AI workflows . Gartner reviewers praise ease of use and analytics but note cost concerns and lack of native mobile app .
-
-
-
-- **[TalentLMS](https://www.talentlms.com/)**  
-
-  Cloud LMS with ecommerce and external training capabilities for small to mid-sized teams.
-
-
-
-- **[Canvas LMS](https://www.instructure.com/canvas)**  
-
-  Academic LMS with open-source core; can be configured for external training but not purpose-built for extended enterprise commerce or partner enablement.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Moodle + IOMAD](https://github.com/iomad/moodle-local_iomad)**  
-
-  The **most mature open-source extended enterprise solution** available. IOMAD is a suite of Moodle plugins adding **comprehensive multi-tenancy**: white-labeling (themes, URLs, certification, emails, authentication, course sharing), **per-tenant OIDC and SAML 2 SSO**, per-tenant corporate hierarchies (parent/child), per-tenant role capabilities for tenant self-management, license-based enrollment, advanced compliance reporting, automated course lifecycles, face-to-face training events with waiting rooms and approval workflows, learning paths, and an **ecommerce solution with per-tenant payment accounts and pricing structures** . Developed by Moodle Partner e-Learn Design. Requires Moodle core patches. **This is the closest open-source equivalent to Docebo Extended Enterprise or Thought Industries Panorama**, with years of production use in commercial training contexts.
-
-
-
-- **[Open edX + eox-tenant](https://github.com/eduNEXT/eox-tenant)**  
-
-  Open edX is the MOOC-scale platform powering edX.org; **eox-tenant** (by eduNEXT) is a plugin replacing the older microsites feature with a **robust multi-tenancy model**: microsites for tenant configuration, routes for tenant URLs, tenant configs, and tenant organizations linking organizations to tenants . Compatible with Open edX releases from Ironwood through Verawood. While not purpose-built for commerce like IOMAD, it enables running multiple branded learning portals from a single Open edX instance—suitable for organizations delivering external training at scale without per-tenant infrastructure. **Commerce and partner enablement require additional development**; Open edX itself is course-delivery focused rather than customer-training focused.
-
-
-
-- **[TutorLoom](https://github.com/pacewisdomhq/TutorLoom)**  
-
-  Self-hosted, **multi-tenant LMS** for training institutes and teams (Apache-2.0); features course builder, trainer and student portals, progress tracking, batches, organizations, analytics dashboards, and JWT authentication with role-based access . Django 6 + React 19 + PostgreSQL + Redis/Celery stack. **Early-stage** but explicitly designed for multi-tenant training delivery—the architecture aligns with extended enterprise needs, though it lacks the ecommerce, white-labeling depth, and partner hierarchy features of IOMAD.
-
-
-
-- **[euron-open-lms](https://github.com/euron-sde-team/euron-open-lms)**  
-
-  Open-source, self-hosted LMS with **Stripe Checkout/Billing and Razorpay** commerce, verifiable certificates with public verification pages, subscriptions, coupons, refunds, and a full admin control plane . Features HLS video, quizzes, reviewed assignments, Q&A threads, moderation, and a mobile app (iOS/Android) with offline downloads. **Commerce is native and well-architected** (gateway routing per currency, tax handling, webhook reconciliation). **Not explicitly multi-tenant**—each deployment serves one organization/brand—but provides the ecommerce and certification infrastructure extended enterprise training businesses need. Early-stage but architecturally ambitious.
-
-
-
-- **[ClassroomIO](https://github.com/classroomio/classroomio)**  
-
-  Open-source no-code LMS for bootcamps, educators, and businesses (SvelteKit + Supabase); features unlimited courses, multi-teacher management, AI course creation, student forums, and dedicated dashboards . **Not multi-tenant** and lacks commerce/partner features, but suitable for small training businesses delivering external education without enterprise complexity.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **MuTMS** — Moodle distribution with multi-tenancy patches and plugins (programs, certifications, training credits, supervisors/teams) assembled for easier deployment ; an alternative packaging of Moodle multi-tenancy if IOMAD's specific feature set isn't required.
-
-- **Richie (with Open edX)** — Learning portal CMS that can aggregate courses from multiple Open edX instances into branded course catalogs; the `tutor-contrib-richie-site-factory` plugin enables running multiple Richie sites ; useful for creating external-facing course catalogs while Open edX handles delivery.
-
-
-
-**Frameworks for building custom systems**: **Moodle + IOMAD** is the only mature open-source option that covers the core extended enterprise requirements: multi-tenancy, white-labeling, per-tenant SSO, partner hierarchies, and ecommerce . **Open edX + eox-tenant** provides multi-tenant course delivery at MOOC scale but requires commerce development . **euron-open-lms** provides modern commerce infrastructure but single-tenant . A complete extended enterprise stack for organizations needing customer/partner training with revenue generation would most practically center on IOMAD, with custom development for Salesforce/customer-success integrations comparable to Skilljar.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Extended enterprise learning platforms handling customer and partner data must comply with applicable privacy regulations and ecommerce laws; training records and certification data may have contractual and regulatory retention requirements.
-
-- **Open-source extended enterprise learning is viable but not turnkey**—IOMAD provides mature multi-tenancy and ecommerce on Moodle, but requires Moodle expertise and core patches . Open edX multi-tenancy is course-delivery focused without native commerce . Newer projects (TutorLoom, euron-open-lms) are architecturally promising but early-stage . Organizations requiring Salesforce/customer-success integration and revenue attribution comparable to Skilljar should plan for commercial platforms or significant custom development.
-
-- Verify license terms for commercial use; IOMAD is GPL-compatible Moodle plugin , eox-tenant is open-source , TutorLoom is Apache-2.0 , and euron-open-lms is open-source .
-
-
+Extended Enterprise Learning represents training solutions targeted at external audiences—such as customers, channel partners, resellers, franchisees, contractors, and association members. These platforms accelerate user onboarding, boost product adoption, elevate partner retention, reduce support ticket volume, and drive recurring revenue through branded academies, multi-portal architectures, and integrated eCommerce.
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Enterprise Platforms](#saas--hosted-enterprise-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Architecture & Frameworks Comparison](#architecture--frameworks-comparison)
+- [Key Features Checklist for Extended Enterprise](#key-features-checklist-for-extended-enterprise)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & License Guidance](#disclaimer--license-guidance)
 
-**Made for customer education leaders, partner enablement teams, training business owners, and extended enterprise platform architects.**  
+---
 
-Let's make extended enterprise learning more open, branded, and revenue-capable.
+## Sector Overview & Market Dynamics
+
+The global Learning Management System (LMS) market is estimated between **$24B and $34B** (scaling toward **$100B+** by the mid-2030s at an estimated **16%–22% CAGR**), with extended enterprise learning constituting one of its fastest-growing and highest-retention software segments. The sector is **moderately fragmented**: broad enterprise Human Capital Management (HCM) conglomerates (such as SAP and Workday) capture large-scale workforce consolidation deals, while specialized customer and partner education providers (such as Docebo, Thought Industries, and Skilljar) command dominant market share in external academies requiring dedicated multi-tenant branding, granular authorization, and direct CRM/eCommerce revenue attribution.
+
+---
+
+## SaaS & Hosted Enterprise Platforms
+
+The following table summarizes notable commercial SaaS platforms tailored for extended enterprise learning, partner training, and customer education. Platforms are sorted in descending order by parent company market capitalization / valuation.
+
+| Platform | Company Valuation / Revenue | Starting Price (Entry Tier) | Free Tier / Free Trial Limits | Key Extended Enterprise Strengths |
+| :--- | :--- | :--- | :--- | :--- |
+| **[SAP Litmos](https://www.litmos.com/)** | ~$250B+ Market Cap *(SAP / Francisco Partners)* | **$8,000 / year** *(Foundation tier, ~100–150 users baseline)* | **14-day free trial** *(No credit card required; full admin and learner interface access)* | Rapid-deployment cloud LMS with built-in eCommerce, off-the-shelf content catalogs, and external partner training. |
+| **[Workday Extended Enterprise](https://www.workday.com/)** | ~$48B Market Cap | **~$100,000 / year** *(Mid-market/enterprise contract baseline, ~$50–$150/user/year)* | **No free trial for HCM core** *(Sales demo & guided scoping only; 30-day trial for Adaptive Planning module)* | Unified human capital & finance ecosystem; white-labeled external worker portals tightly bound to HCM compliance records. |
+| **[Cornerstone OnDemand](https://www.cornerstoneondemand.com/)** | ~$5.2B Valuation *(Clearlake Capital buyout)* | **~$22,000 / year** *(Modular entry baseline; typically $3.50–$8.00/user/month)* | **No free tier or trial** *(Sales-assisted POC and custom demo sandbox only)* | Deep enterprise talent ecosystem offering scalable external portals for enterprise supply chains and distribution partners. |
+| **[Canvas LMS](https://www.instructure.com/canvas)** *(Instructure)* | ~$4.8B Valuation *(KKR acquisition)* | **~$5,000 – $10,000 / year** *(Institutional baseline; ~$5–$30/student/year)* | **Canvas Free-for-Teacher** *(Freemium for individual educators; self-hosted open-source core is free forever)* | Open-source core engine with vast LTI interoperability; widely adaptable for standardized external certifications and continuing education. |
+| **[Docebo](https://www.docebo.com/)** | ~$750M Market Cap | **~$25,000 – $35,000 / year** *(AWS Marketplace / Elevate baseline for ~500 YAU)* | **No public self-serve free trial** *(Guided sales-led proof-of-concept and customized interactive demo only)* | AI-powered learning platform with native multi-portal Extended Enterprise module, white-labeling, Salesforce integration, and Stripe checkout. |
+| **[Absorb LMS](https://www.absorblms.com/)** | ~$500M+ Valuation *(WCAS acquisition)* | **~$14,500 / year** *(Mid-market baseline for ~500 learners via procurement data)* | **No self-serve free trial** *(Custom sandbox environments arranged via enterprise sales consultations)* | Turnkey multi-tenant portals, automated learner workflows, and customizable eCommerce pipelines for external product education. |
+| **[Skilljar](https://www.skilljar.com/)** *(Gainsight)* | ~$53M+ VC Funding / Scaled Division | **~$30,000 / year** *(Essentials tier baseline; scaled by Monthly Active Users)* | **No free trial** *(Sales consultation and customized sandbox demo for qualified buyer teams)* | Purpose-built customer LMS by Gainsight; tight integrations with Salesforce, Gainsight CS, Marketo, Zendesk, and Stripe payment gateways. |
+| **[LearnUpon](https://www.learnupon.com/)** | ~$57M+ Equity / $50M Growth Debt | **~$10,000 – $15,000 / year** *(Entry tier baseline, 100+ learner minimum)* | **No self-serve free trial** *(Direct sales walkthrough with scheduled sandbox testing)* | Multi-portal architecture allowing distinct branded environments for employees, channel partners, and customers from one backend. |
+| **[Thought Industries](https://www.thoughtindustries.com/)** | ~$50M+ Institutional Capital *(Luminate)* | **~$15,000 – $25,000 / year** *(Starter package; median contracts ~$54,000/year)* | **No free trial** *(Guided evaluation and bespoke proof-of-concept for enterprise buyers)* | Craig Weiss #1 ranked Customer Training System; features Panorama multi-tenant portals, proctoring, ILT/vILT, and advanced licensing. |
+| **[TalentLMS](https://www.talentlms.com/)** *(Epignosis)* | ~$20M – $40M Annual Revenue | **$1,428 / year** *($119/month billed annually for Core tier up to 40 users)* | **Free-forever tier** *(Up to 5 active users, 10 active courses, 100 MB file upload limit, no expiry)* | Accessible, easy-to-configure cloud LMS with branching portals (Branches feature on higher plans), eCommerce integration, and Gamification. |
+
+---
+
+## Open-Source GitHub Projects
+
+The following table showcases open-source learning platforms and modular extensions suitable for external training, multi-tenancy, and customer enablement. Repositories are sorted in descending order by GitHub stargazer count.
+
+| Project | GitHub Stars | Primary License | Architecture & Extended Enterprise Capabilities |
+| :--- | :---: | :--- | :--- |
+| **[Open edX](https://github.com/openedx/edx-platform)** | [![GitHub stars](https://img.shields.io/github/stars/openedx/edx-platform?style=social&color=white)](https://github.com/openedx/edx-platform/stargazers) | AGPL-3.0 | Massive-scale learning platform powering global MOOCs. Can be extended with [`eox-tenant`](https://github.com/eduNEXT/eox-tenant) for multi-tenancy microsites and branded catalogs across external partner cohorts. |
+| **[Moodle](https://github.com/moodle/moodle)** | [![GitHub stars](https://img.shields.io/github/stars/moodle/moodle?style=social&color=white)](https://github.com/moodle/moodle/stargazers) | GPL-3.0 | The world's most widely deployed open-source LMS. Combined with the [IOMAD](https://github.com/iomad/moodle-local_iomad) suite, it provides full multi-tenancy, per-company hierarchies, and tenant billing. |
+| **[Canvas LMS](https://github.com/instructure/canvas-lms)** | [![GitHub stars](https://img.shields.io/github/stars/instructure/canvas-lms?style=social&color=white)](https://github.com/instructure/canvas-lms/stargazers) | AGPL-3.0 | Ruby on Rails modern LMS core with comprehensive REST APIs and Canvas Studio/Catalog extensions for modular course delivery. |
+| **[Frappe LMS](https://github.com/frappe/lms)** | [![GitHub stars](https://img.shields.io/github/stars/frappe/lms?style=social&color=white)](https://github.com/frappe/lms/stargazers) | AGPL-3.0 | Modern, clean open-source LMS built on Python and Frappe Framework. Features native monetization, student certification, batch cohorts, and tight integration with ERPNext. |
+| **[ClassroomIO](https://github.com/classroomio/classroomio)** | [![GitHub stars](https://img.shields.io/github/stars/classroomio/classroomio?style=social&color=white)](https://github.com/classroomio/classroomio/stargazers) | MIT | Open-source no-code LMS built on SvelteKit and Supabase. Supports unlimited courses, AI-assisted authoring, and public-facing academies for independent educators and startups. |
+| **[Chamilo LMS](https://github.com/chamilo/chamilo-lms)** | [![GitHub stars](https://img.shields.io/github/stars/chamilo/chamilo-lms?style=social&color=white)](https://github.com/chamilo/chamilo-lms/stargazers) | GPL-3.0 | Lightweight PHP-based e-learning suite supporting multi-institution setups, skills management, session-based training, and integrated eCommerce catalog extensions. |
+| **[ILIAS](https://github.com/ILIAS-eLearning/ILIAS)** | [![GitHub stars](https://img.shields.io/github/stars/ILIAS-eLearning/ILIAS?style=social&color=white)](https://github.com/ILIAS-eLearning/ILIAS/stargazers) | GPL-3.0 | Mature enterprise learning platform compliant with SCORM and LTI. Includes integrated workspace management, fine-grained RBAC, and client separation capabilities. |
+| **[Richie](https://github.com/openfun/richie)** | [![GitHub stars](https://img.shields.io/github/stars/openfun/richie?style=social&color=white)](https://github.com/openfun/richie/stargazers) | MIT | Specialized Course Catalog CMS (Django/React) designed to sit in front of Open edX and Moodle instances to provide multi-site branded course discovery and sales portals. |
+| **[IOMAD](https://github.com/iomad/iomad)** | [![GitHub stars](https://img.shields.io/github/stars/iomad/iomad?style=social&color=white)](https://github.com/iomad/iomad/stargazers) | GPL-3.0 | Specialized enterprise distribution of Moodle built from the ground up for multi-tenancy: per-client sub-portals, custom themes, separate SSO configs, and per-tenant ecommerce gateways. |
+| **[TutorLoom](https://github.com/pacewisdomhq/TutorLoom)** | [![GitHub stars](https://img.shields.io/github/stars/pacewisdomhq/TutorLoom?style=social&color=white)](https://github.com/pacewisdomhq/TutorLoom/stargazers) | Apache-2.0 | Multi-tenant training platform built on Django and React with distinct trainer and student workflows, batch management, organizational divisions, and JWT authentication. |
+| **[eox-tenant](https://github.com/eduNEXT/eox-tenant)** | [![GitHub stars](https://img.shields.io/github/stars/eduNEXT/eox-tenant?style=social&color=white)](https://github.com/eduNEXT/eox-tenant/stargazers) | AGPL-3.0 | eduNEXT's flagship Open edX multi-tenancy plugin. Powers multi-organization microsites, custom URL routing, and scoped configurations across shared infrastructure. |
+| **[euron-open-lms](https://github.com/euron-sde-team/euron-open-lms)** | [![GitHub stars](https://img.shields.io/github/stars/euron-sde-team/euron-open-lms?style=social&color=white)](https://github.com/euron-sde-team/euron-open-lms/stargazers) | Open-Source | Headless and self-hosted LMS emphasizing native payment integration (Stripe Checkout & Razorpay), public certificate verification links, HLS video delivery, and subscriptions. |
+
+---
+
+## Architecture & Frameworks Comparison
+
+Extended enterprise applications have fundamental structural requirements that differ substantially from traditional internal HR learning systems:
+
+```mermaid
+graph TD
+    A[Extended Enterprise Core Engine] --> B[Multi-Tenant Sub-Portals]
+    A --> C[External Identity & SSO]
+    A --> D[Commerce & Licensing Engine]
+    A --> E[CRM & Customer Success Sync]
+
+    B --> B1[Franchisee Branded Portal]
+    B --> B2[Reseller / Channel Portal]
+    B --> B3[Public Customer Academy]
+
+    C --> C1[Social SSO / OAuth2]
+    C --> C2[Partner SAML 2.0 / OIDC]
+
+    D --> D1[Stripe / Multi-Currency]
+    D --> D2[Bulk Seat Licensing]
+
+    E --> E1[Salesforce / Gainsight Data Sync]
+    E --> E2[Product Adoption Telemetry]
+```
+
+### Commercial vs. Open-Source Realities
+
+1. **The Commercial Advantage (Turnkey CRM & Attributed ROI):** SaaS leaders like Skilljar, Thought Industries, and Docebo excel at deep integration with CRM pipelines (Salesforce, HubSpot, Gainsight). They correlate customer course completion with product retention, net revenue retention (NRR), and support deflection.
+2. **The Open-Source Multi-Tenancy Landscape:** True multi-tenancy is rare in vanilla open-source LMS projects. **Moodle + IOMAD** remains the most field-tested open-source option for corporate parent/child tenant hierarchies. **Open edX + eox-tenant** provides scalable MOOC infrastructure for large partner networks.
+3. **Hybrid Architecture Approach:** High-scale training providers often combine an open-source course catalog portal (e.g., **Richie** or Headless Next.js/Frappe) with an isolated LMS execution backend to ensure optimal performance, white-labeled domain mapping, and data privacy compliance.
+
+---
+
+## Key Features Checklist for Extended Enterprise
+
+When evaluating or architecting an extended enterprise LMS, verify support for the following critical capabilities:
+
+- [x] **Multi-Tenancy & White-Labeling:** Independent sub-domains, custom branding, localized CSS, and distinct email notification templates per tenant.
+- [x] **Federated Authentication:** Per-tenant SAML 2.0, OpenID Connect (OIDC), and social login (Google, GitHub, LinkedIn).
+- [x] **Role-Based Delegation:** Delegated tenant administrators who manage their own user rosters and view scoped team compliance reports.
+- [x] **Flexible eCommerce & Billing:** Native support for Stripe, PayPal, coupon engines, subscription billing, and bulk B2B license vouchers.
+- [x] **Accreditation & Badging:** Verifiable digital certificates, Open Badges 2.0/3.0 compliance, and LinkedIn profile sharing.
+- [x] **API & CRM Integrations:** Bidirectional syncing with Salesforce, HubSpot, Segment, and Customer Success platforms.
+
+---
+
+## How to Contribute
+
+Contributions are warmly welcomed! Help us keep this ecosystem accurate and comprehensive.
+
+1. **Fork the repository** on GitHub.
+2. **Create a branch** for your feature or addition (`git checkout -b feature/add-new-lms`).
+3. **Add verified entries** to `README.md` adhering to the established table formats (ensure accurate pricing, trial details, and company metrics).
+4. **Test formatting & links** before committing.
+5. **Open a Pull Request** with a concise description of your additions.
+
+---
+
+## Disclaimer & License Guidance
+
+- This repository is a community-maintained curated index provided for research, architectural planning, and educational purposes.
+- Extended enterprise platforms processing partner and customer data must strictly adhere to data protection regulations (GDPR, CCPA) and payment security standards (PCI-DSS).
+- Please verify software licensing terms before commercial deployment (GPL, AGPL, MIT, Apache-2.0, or proprietary terms).
+
+---
+
+<p align="center">
+  <b>Built for Customer Education Leaders, Partner Enablement Managers, and Learning Architects.</b><br>
+  <sub>Star ⭐ this repo if you find it helpful for your learning ecosystem architecture!</sub>
+</p>
